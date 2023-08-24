@@ -12,6 +12,7 @@ global using System.Reactive.Disposables;
 
 // ReactiveCore
 global using ReactiveCore;
+global using ReactiveCore.Attribution;
 global using ReactiveCore.Navigation;
 
 // Project

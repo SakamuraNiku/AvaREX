@@ -6,7 +6,7 @@ public static class ReflectionExtensions
         where TAttr : Attribute
     {
         TAttr? attr;
-        if ((attr = obj.GetType().GetCustomAttribute<TAttr>()) != null)
+        if ((attr = obj.GetType().GetCustomAttribute<TAttr>()) == null)
             return null;
 
         return attr;

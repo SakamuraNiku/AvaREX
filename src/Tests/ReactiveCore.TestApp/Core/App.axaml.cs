@@ -4,7 +4,8 @@ public partial class App : Application
 {
     #region Overrides
 
-    public override void Initialize() => AvaloniaXamlLoader.Load(this);
+    public override void Initialize() =>
+        AvaloniaXamlLoader.Load(this);
 
     public override void OnFrameworkInitializationCompleted()
     {

@@ -1,4 +1,4 @@
-namespace ReactiveCore;
+namespace ReactiveCore.Navigation;
 
 /// <summary>
 /// Represents the base definition of Host that displays HostViews.
@@ -6,9 +6,9 @@ namespace ReactiveCore;
 public interface IHostFor
 {
     /// <summary>
-    /// Gets Currently displayed HostView.
+    /// Gets currently displayed HostView.
     /// </summary>
-    IReactiveHostView HostView { get; }
+    IReactiveHostView? HostView { get; }
 }
 
 /// <summary>

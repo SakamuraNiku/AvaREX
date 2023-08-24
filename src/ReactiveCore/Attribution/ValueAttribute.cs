@@ -1,4 +1,4 @@
-namespace ReactiveCore;
+namespace ReactiveCore.Attribution;
 
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
 public class ValueAttribute<T> : Attribute where T : class

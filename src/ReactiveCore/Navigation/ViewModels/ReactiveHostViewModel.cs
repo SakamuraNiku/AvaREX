@@ -1,43 +1,44 @@
 namespace ReactiveCore.Navigation;
 
+/// <summary>
+/// Represents HostView`s ViewModel.
+/// </summary>
 [DataContract]
 public class ReactiveHostViewModel : ViewModel, IReactiveHostViewModel
 {
     #region Auto Properties
 
+    [Reactive]
     [DataMember]
-    public RoutingState Router
-    {
-        get => _routerState;
-        set => this.RaiseAndSetIfChanged(ref _routerState, value);
-    }
+    public RoutingState Router { get; set; } = new();
 
-    #endregion
-
-    #region Private Fields
-
-    private RoutingState _routerState = new();
+    [IgnoreDataMember]
+    public string? UrlPathSegment => this.GetUrlSegment();
 
     #endregion
 
     #region Constructors
 
+    /// <summary>
+    /// Initializes a new instance of <see cref="ReactiveHostViewModel"/> class.
+    /// </summary>
     public ReactiveHostViewModel() { }
 
     #endregion
 }
 
+/// <summary>
+/// Represents HostView`s ViewModel.
+/// </summary>
+/// <typeparam name="T">ViewModel`s data type.</typeparam>
 [DataContract]
 public class ReactiveHostViewModel<T> : ReactiveHostViewModel, IReactiveHostViewModel<T> where T : class
 {
     #region Auto Properties
 
+    [Reactive]
     [DataMember]
-    public new T? DataContext
-    {
-        get => _dataContext;
-        set => this.RaiseAndSetIfChanged(ref _dataContext, value);
-    }
+    public new T? DataContext { get; set; }
 
     object? IViewModel.DataContext
     {
@@ -47,14 +48,11 @@ public class ReactiveHostViewModel<T> : ReactiveHostViewModel, IReactiveHostView
 
     #endregion
 
-    #region Private Fields
-
-    private T? _dataContext = null;
-
-    #endregion
-
     #region Constructors
 
+    /// <summary>
+    /// Initializes a new instance of <see cref="ReactiveHostViewModel{T}"/> class.
+    /// </summary>
     public ReactiveHostViewModel() { }
 
     #endregion
