@@ -1,5 +1,6 @@
 ﻿namespace ReactiveCore.TestApp.ViewModels;
 
+[HostViewContract(Contract = "MainView")]
 public class AppViewModel : ReactiveHostViewModel<string>
 {
     #region Overrides

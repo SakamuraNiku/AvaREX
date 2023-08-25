@@ -1,4 +1,4 @@
-namespace ReactiveCore.Attribution;
+namespace ReactiveCore.Annotation;
 
 /// <summary>
 /// Represents attribute that sets HostView`s settings.

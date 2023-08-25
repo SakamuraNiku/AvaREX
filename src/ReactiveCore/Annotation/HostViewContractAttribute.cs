@@ -1,4 +1,4 @@
-namespace ReactiveCore.Attribution;
+namespace ReactiveCore.Annotation;
 
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
 public class HostViewContractAttribute : Attribute

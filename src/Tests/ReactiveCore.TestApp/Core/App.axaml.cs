@@ -9,12 +9,11 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+        Navigator.Current.BootstrapNavigation(GetType().Assembly);
+
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new MainWindow
-            {
-                DataContext = new AppViewModel()
-            };
+            desktop.MainWindow = Navigator.Current.StartUpHostFor;
         }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {

@@ -39,7 +39,7 @@ public class WindowView<T> : Window, IHostFor<T> where T : class, IReactiveHostV
     /// <summary>
     /// Initializes a new instance of <see cref="WindowView{T}"/> class.
     /// </summary>
-    public WindowView() { }
+    public WindowView() { Content = HostView = Navigator.Current.GetHostViewFor(this); }
 
     #endregion
 }

@@ -20,5 +20,5 @@ global using System.Runtime.Serialization;
 
 // Project
 global using ReactiveCore;
-global using ReactiveCore.Attribution;
+global using ReactiveCore.Annotation;
 global using ReactiveCore.Navigation;

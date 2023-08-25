@@ -12,10 +12,11 @@ global using System.Reactive.Disposables;
 
 // ReactiveCore
 global using ReactiveCore;
-global using ReactiveCore.Attribution;
+global using ReactiveCore.Annotation;
 global using ReactiveCore.Navigation;
 
 // Project
 global using ReactiveCore.TestApp.Core;
+global using ReactiveCore.TestApp.Models;
 global using ReactiveCore.TestApp.ViewModels;
 global using ReactiveCore.TestApp.Views;
